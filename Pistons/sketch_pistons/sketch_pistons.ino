@@ -1,4 +1,4 @@
-#include <FastTouch.h>
+#include <FastTouch.h> // https://github.com/adrianfreed/FastTouch
 
 // 0 when LED is Off, otherwise shows the pin number + 1 of the detected touch input
 int LEDON = 0;
