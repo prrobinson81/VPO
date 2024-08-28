@@ -1,7 +1,13 @@
-# Manuals
+# How To Extend The Keyboard Compass
+
+## GO ODF
+The following steps are performed using GO ODF from https://github.com/GrandOrgue/GoOdf/.
+You should be able to download pre-compiled versions of the tool from the [Releases](https://github.com/GrandOrgue/GoOdf/releases) folder.
+
+## Manuals
 * For each manual change the ‘logical keys’ and ‘accessible keys’ values to 61
 
-# Stops
+## Stops
 * Change stop ‘number of logical pipes’ to 61
 * 'Flexible pipe loading', starting at pipe 57, matching (MIDI) number 80, total number of pipes to load 5, ‘Load pipes’
 * Expand the pipe tree and confirm all the new pipes have been successfully assigned pipe samples (080-g#.wav through to 084-c.wav) - if not, subtract 12 from the current pipe number and expand that pipe number, checking which samples are used, and what tuning offset is applied.
@@ -14,6 +20,7 @@
 * Save & test 
 * Rinse & repeat for all stops
 
-# UI Elements
+## UI Elements
+Clean-up the UI once all the testing is complete, by removing the extra (newly added) keys on the manuals:
 * Expand the Panels / Main Panel / GUI Elements and find the element for each displayed manual
 * Set the ‘Display Keys’ value back to 56 (or whatever it was originally) to hide the extended keys in the UI and avoid making things look funky.
