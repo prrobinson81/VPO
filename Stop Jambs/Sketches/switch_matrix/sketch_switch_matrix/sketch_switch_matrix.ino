@@ -10,7 +10,7 @@
 byte rowPins[] = {14, 15, 16, 17, 18, 19, 20, 21, 22, 23};
 const int rowCount = sizeof(rowPins) / sizeof(rowPins[0]);
 
-// columns come in on he top-left of the device
+// columns come in on the top-left of the device
 byte colPins[] = {0, 1, 2, 3, 4, 5};
 const int colCount = sizeof(colPins) / sizeof(colPins[0]);
 
@@ -24,8 +24,8 @@ void setup() {
 
   // initiate cached states to 1/off
   // Note:
-  // - we're using INPUT_PULLUP so a closed/on switch completes the circuit, pulling the value to low/0.
-  // - converseley an open/off switch breaks the circuit so the value is high/1.
+  // - we're using INPUT_PULLUP so a closed/on switch completes the circuit, earthing the value to low/0.
+  // - conversely an open/off switch breaks the circuit so the value is left high/1.
   for(int colIndex = 0; colIndex < colCount; colIndex++) {
     for (int rowIndex = 0; rowIndex < rowCount; rowIndex++) {
       keycache[colIndex][rowIndex] = 1;
