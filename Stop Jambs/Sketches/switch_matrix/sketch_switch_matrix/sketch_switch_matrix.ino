@@ -1,10 +1,32 @@
-// Stop Jambs
-// 6 columns, 10 rows
+// 2 Stop Jambs
+// 6 columns, 10 rows (3 columns per jamb)
 // Original keyboard matrix code from:
 // https://www.baldengineer.com/arduino-keyboard-matrix-tutorial.html
 //
-// TODO - migrate to Teensy MIDI to send note on/off values, instead of writing out to Serial
-// TODO - Add in addressable LED code so status LEDs can be turned on and off by the MIDI controller (i.e. not the local buttons)
+// TODO - migrate to Teensy MIDI to send note on/off values from the switches, and receive note on/off values to control the LEDs.
+
+#include <Adafruit_NeoPixel.h>
+
+// Which pin on the Arduino is connected to the NeoPixels?
+// On a Trinket or Gemma we suggest changing this to 1:
+#define JAMB1_LED_PIN    24
+#define JAMB2_LED_PIN    41
+
+// How many NeoPixels are attached to the Arduino?
+#define JAMB1_LED_COUNT 30
+#define JAMB2_LED_COUNT 30
+
+// Declare our NeoPixel strip object:
+Adafruit_NeoPixel jamb1_strip(JAMB1_LED_COUNT, JAMB1_LED_PIN, NEO_RGB + NEO_KHZ800);
+Adafruit_NeoPixel jamb2_strip(JAMB2_LED_COUNT, JAMB2_LED_PIN, NEO_RGB + NEO_KHZ800);
+// Argument 1 = Number of pixels in NeoPixel strip
+// Argument 2 = Arduino pin number (most are valid)
+// Argument 3 = Pixel type flags, add together as needed:
+//   NEO_KHZ800  800 KHz bitstream (most NeoPixel products w/WS2812 LEDs)
+//   NEO_KHZ400  400 KHz (classic 'v1' (not v2) FLORA pixels, WS2811 drivers)
+//   NEO_GRB     Pixels are wired for GRB bitstream (most NeoPixel products)
+//   NEO_RGB     Pixels are wired for RGB bitstream (v1 FLORA pixels, not v2)
+//   NEO_RGBW    Pixels are wired for RGBW bitstream (NeoPixel RGBW products)
 
 // rows come in on the top-right of the device
 byte rowPins[] = {14, 15, 16, 17, 18, 19, 20, 21, 22, 23};
@@ -21,6 +43,13 @@ byte keycache[colCount][rowCount];
 // Initiate the Teensy
 void setup() {
   Serial.begin(115200);
+
+  jamb1_strip.begin();           // INITIALIZE NeoPixel strip object (REQUIRED)
+  jamb2_strip.begin();           // INITIALIZE NeoPixel strip object (REQUIRED)
+  jamb1_strip.show();            // Turn OFF all pixels ASAP
+  jamb2_strip.show();            // Turn OFF all pixels ASAP
+  jamb1_strip.setBrightness(250); // Set BRIGHTNESS to about 1/5 (max = 255)
+  jamb2_strip.setBrightness(250); // Set BRIGHTNESS to about 1/5 (max = 255)
 
   // initiate cached states to 1/off
   // Note:
@@ -79,8 +108,24 @@ void readMatrix() {
 
         if (keys[colIndex][rowIndex] == 1) {
           Serial.print("off");
+
+          if (midiNote < 30) {
+            jamb1_strip.setPixelColor(midiNote, jamb1_strip.Color(0, 0, 0));
+            jamb1_strip.show();
+          } else {
+            jamb2_strip.setPixelColor(midiNote - 30, jamb2_strip.Color(0, 0, 0));
+            jamb2_strip.show();
+          }
         } else {
           Serial.print("on");
+
+          if (midiNote < 30) {
+            jamb1_strip.setPixelColor(midiNote, jamb1_strip.Color(0, 0, 255));
+            jamb1_strip.show();
+          } else {
+            jamb2_strip.setPixelColor(midiNote - 30, jamb2_strip.Color(0, 0, 255));
+            jamb2_strip.show();
+          }
         }
 
         Serial.println("");
