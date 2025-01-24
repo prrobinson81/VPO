@@ -24,5 +24,6 @@ The momentary switches are wired using a 'keyboard matrix' with the diodes to pr
 The LEDs are wired in serial, 0-9 in the first column, 10-19 in the second column, 20-29 in the third column, with the data out from each LED connected to data in of the next.  +5V and 0V are connected on each column of LEDs, and are fed from the single power supply connected to the processing unit.
 Each acrylic collar has a 5mm hole drilled into the side, 7mm from the bottom.  The LED is then fed through this hole to encourage as much light as possible into the acrylic, so that it acts as a light tube.
 The wooden drawer knobs have had their screw threads removed, and the soft caps glued into them, so they can be easily affixed to the momentary switches.  Each knob will have the relevent stop name etched onto the surface using a pyrography tool.
-(Circuit diagram to follow).
+
+Circuit diagrams to follow, and you can see images of the current development in the <a href="./Images">Images</a> folder.
 
