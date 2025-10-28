@@ -10,6 +10,7 @@
 ;1.4.2 Split Simple Jamb into Simple-Left and Simple-Right for use on portrait touchscreens
 ;1.4.3 Added Choir to Swell coupler with stops on Simple and Simple-Left jambs
 ;      Removed Traditional Left and Right jambs
+;      Fixed compass of existing couplers
 ;
 ;This GrandOrgue Organ Definition File (ODF) is provided under the Creative Commons Non-Commercial
 ;Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
@@ -144,7 +145,7 @@ CoupleToSubsequentUpwardIntermanualCouplers=N
 CoupleToSubsequentDownwardIntermanualCouplers=N
 CoupleToSubsequentUpwardIntramanualCouplers=N
 CoupleToSubsequentDownwardIntramanualCouplers=N
-NumberOfKeys=56
+NumberOfKeys=61
 
 [Coupler005]
 Name=Swell Sub Octave to Great
@@ -159,7 +160,7 @@ CoupleToSubsequentUpwardIntermanualCouplers=N
 CoupleToSubsequentDownwardIntermanualCouplers=N
 CoupleToSubsequentUpwardIntramanualCouplers=N
 CoupleToSubsequentDownwardIntramanualCouplers=N
-NumberOfKeys=56
+NumberOfKeys=61
 
 [Coupler006]
 Name=Swell to Great Unison
@@ -174,7 +175,7 @@ CoupleToSubsequentUpwardIntermanualCouplers=N
 CoupleToSubsequentDownwardIntermanualCouplers=N
 CoupleToSubsequentUpwardIntramanualCouplers=N
 CoupleToSubsequentDownwardIntramanualCouplers=N
-NumberOfKeys=56
+NumberOfKeys=61
 
 [Coupler007]
 Name=Choir to Great
@@ -189,7 +190,7 @@ CoupleToSubsequentUpwardIntermanualCouplers=N
 CoupleToSubsequentDownwardIntermanualCouplers=N
 CoupleToSubsequentUpwardIntramanualCouplers=N
 CoupleToSubsequentDownwardIntramanualCouplers=N
-NumberOfKeys=56
+NumberOfKeys=61
 
 [Coupler008]
 Name=Choir to Swell
