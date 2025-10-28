@@ -7,6 +7,7 @@
 ;1.3 Corrected Sesquialter Harmonic Number; softened tremulant
 ;1.4 Further pitch corrections
 ;1.4.1 Extend keyboard compass to 61 notes
+;1.4.2 Split Simple Jamb into Simple-Left and Simple-Right for use on portrait touchscreens.
 ;
 ;This GrandOrgue Organ Definition File (ODF) is provided under the Creative Commons Non-Commercial
 ;Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
@@ -33,7 +34,7 @@ NumberOfWindchestGroups=5
 NumberOfReversiblePistons=3
 NumberOfGenerals=0
 NumberOfDivisionalCouplers=0
-NumberOfPanels=3
+NumberOfPanels=7
 NumberOfSwitches=57
 NumberOfRanks=43
 DivisionalsStoreIntermanualCouplers=N
@@ -317,17 +318,17 @@ CoupleToSubsequentDownwardIntramanualCouplers=Y
 [ReversiblePiston001]
 Name=Sw to Gt
 ObjectType=SWITCH
-ObjectNumber=008
+ObjectNumber=011
 
 [ReversiblePiston002]
 Name=Ped Reed 16
 ObjectType=SWITCH
-ObjectNumber=020
+ObjectNumber=023
 
 [ReversiblePiston003]
 Name=Gt to Ped
 ObjectType=SWITCH
-ObjectNumber=011
+ObjectNumber=014
 
 [Manual000]
 Name=Pedale
@@ -29257,5 +29258,1091 @@ Type=Switch
 Switch=057
 DispDrawstopRow=100
 DispDrawstopCol=3
+
+
+[Panel004]
+Name=Simple Jamb - Left
+HasPedals=Y
+NumberOfImages=1
+NumberOfGUIElements=21
+DispScreenSizeHoriz=770
+DispScreenSizeVert=980
+DispDrawstopBackgroundImageNum=17
+DispConsoleBackgroundImageNum=19
+DispKeyHorizBackgroundImageNum=18
+DispKeyVertBackgroundImageNum=13
+DispDrawstopInsetBackgroundImageNum=19
+DispControlLabelFont=Arial
+DispShortcutKeyLabelFont=Arial
+DispShortcutKeyLabelColour=YELLOW
+DispGroupLabelFont=Arial
+DispDrawstopCols=4
+DispDrawstopRows=7
+DispDrawstopColsOffset=Y
+DispDrawstopOuterColOffsetUp=N
+DispPairDrawstopCols=N
+DispExtraDrawstopRows=4
+DispExtraDrawstopCols=3
+DispButtonCols=10
+DispExtraButtonRows=1
+DispExtraPedalButtonRow=N
+DispButtonsAboveManuals=N
+DispTrimAboveManuals=N
+DispTrimBelowManuals=N
+DispTrimAboveExtraRows=N
+DispExtraDrawstopRowsAboveExtraButtonRows=Y
+
+[Panel004Image001]
+Image=OrganInstallationPackages\002931\Images\Simple Jamb\Simple Jamb - Left.png
+
+[Panel004Element001]
+Type=Enclosure
+Enclosure=001
+PositionX=587
+PositionY=298
+BitmapCount=15
+Bitmap001=OrganInstallationPackages\002931\Images\Simple Jamb\Expression\SwExp1.png
+Bitmap002=OrganInstallationPackages\002931\Images\Simple Jamb\Expression\SwExp2.png
+Bitmap003=OrganInstallationPackages\002931\Images\Simple Jamb\Expression\SwExp3.png
+Bitmap004=OrganInstallationPackages\002931\Images\Simple Jamb\Expression\SwExp4.png
+Bitmap005=OrganInstallationPackages\002931\Images\Simple Jamb\Expression\SwExp5.png
+Bitmap006=OrganInstallationPackages\002931\Images\Simple Jamb\Expression\SwExp6.png
+Bitmap007=OrganInstallationPackages\002931\Images\Simple Jamb\Expression\SwExp7.png
+Bitmap008=OrganInstallationPackages\002931\Images\Simple Jamb\Expression\SwExp8.png
+Bitmap009=OrganInstallationPackages\002931\Images\Simple Jamb\Expression\SwExp9.png
+Bitmap010=OrganInstallationPackages\002931\Images\Simple Jamb\Expression\SwExp10.png
+Bitmap011=OrganInstallationPackages\002931\Images\Simple Jamb\Expression\SwExp11.png
+Bitmap012=OrganInstallationPackages\002931\Images\Simple Jamb\Expression\SwExp12.png
+Bitmap013=OrganInstallationPackages\002931\Images\Simple Jamb\Expression\SwExp13.png
+Bitmap014=OrganInstallationPackages\002931\Images\Simple Jamb\Expression\SwExp14.png
+Bitmap015=OrganInstallationPackages\002931\Images\Simple Jamb\Expression\SwExp15.png
+TextBreakWidth=0
+
+[Panel004Element002]
+Type=Switch
+Switch=001
+PositionX=15
+PositionY=789
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Tremulant-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Tremulant-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel004Element003]
+Type=Switch
+Switch=002
+PositionX=295
+PositionY=57
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Swell Super Octave to Gt.-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Swell Super Octave to Gt.-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel004Element004]
+Type=Switch
+Switch=003
+PositionX=295
+PositionY=118
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Swell Sub Octave to Gt.-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Swell Sub Octave to Gt.-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel004Element005]
+Type=Switch
+Switch=004
+PositionX=295
+PositionY=179
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Swell-to-Great-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Swell-to-Great-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel004Element006]
+Type=Switch
+Switch=005
+PositionX=295
+PositionY=240
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Choir-to-Great-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Choir-to-Great-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel004Element007]
+Type=Switch
+Switch=006
+PositionX=295
+PositionY=301
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Swell-to-Pedal-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Swell-to-Pedal-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel004Element008]
+Type=Switch
+Switch=007
+PositionX=295
+PositionY=362
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Great-to-Pedal-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Great-to-Pedal-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel004Element009]
+Type=Switch
+Switch=008
+PositionX=295
+PositionY=423
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Choir-to-Pedal-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Choir-to-Pedal-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel004Element010]
+Type=Switch
+Switch=029
+PositionX=15
+PositionY=57
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Open-Diapason-8-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Open-Diapason-8-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel004Element011]
+Type=Switch
+Switch=030
+PositionX=15
+PositionY=118
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Lieblich-Gedact-8-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Lieblich-Gedact-8-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel004Element012]
+Type=Switch
+Switch=031
+PositionX=15
+PositionY=179
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Salcional-8-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Salcional-8-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel004Element013]
+Type=Switch
+Switch=032
+PositionX=15
+PositionY=240
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Vox-Angelica-8-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Vox-Angelica-8-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel004Element014]
+Type=Switch
+Switch=033
+PositionX=15
+PositionY=301
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Gemshorn-4-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Gemshorn-4-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel004Element015]
+Type=Switch
+Switch=034
+PositionX=15
+PositionY=362
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Flagoelet-2-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Flagoelet-2-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel004Element016]
+Type=Switch
+Switch=035
+PositionX=15
+PositionY=423
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Mixture-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Mixture-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel004Element017]
+Type=Switch
+Switch=036
+PositionX=15
+PositionY=484
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Posaune-16-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Posaune-16-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel004Element018]
+Type=Switch
+Switch=037
+PositionX=15
+PositionY=545
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Vox-Humana-8-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Vox-Humana-8-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel004Element019]
+Type=Switch
+Switch=038
+PositionX=15
+PositionY=606
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Oboe-8-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Oboe-8-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel004Element020]
+Type=Switch
+Switch=039
+PositionX=15
+PositionY=667
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Trumpet-8-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Trumpet-8-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel004Element021]
+Type=Switch
+Switch=040
+PositionX=15
+PositionY=728
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Clarion-4-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Clarion-4-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+
+[Panel005]
+Name=Simple Jamb - Right
+HasPedals=N
+NumberOfImages=1
+NumberOfGUIElements=27
+DispScreenSizeHoriz=861
+DispScreenSizeVert=980
+DispDrawstopBackgroundImageNum=1
+DispConsoleBackgroundImageNum=1
+DispKeyHorizBackgroundImageNum=1
+DispKeyVertBackgroundImageNum=1
+DispDrawstopInsetBackgroundImageNum=1
+DispControlLabelFont=Arial
+DispShortcutKeyLabelFont=Arial
+DispShortcutKeyLabelColour=BLACK
+DispGroupLabelFont=Arial
+DispDrawstopCols=2
+DispDrawstopRows=1
+DispDrawstopColsOffset=N
+DispPairDrawstopCols=N
+DispExtraDrawstopRows=0
+DispExtraDrawstopCols=0
+DispButtonCols=1
+DispExtraButtonRows=0
+DispExtraPedalButtonRow=N
+DispButtonsAboveManuals=N
+DispTrimAboveManuals=N
+DispTrimBelowManuals=N
+DispTrimAboveExtraRows=N
+DispExtraDrawstopRowsAboveExtraButtonRows=N
+
+[Panel005Image001]
+Image=OrganInstallationPackages\002931\Images\Simple Jamb\Simple Jamb - Right.png
+
+[Panel005Element001]
+Type=Switch
+Switch=009
+PositionX=15
+PositionY=57
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Open-Diapason-16-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Open-Diapason-16-Off.png
+TextBreakWidth=0
+
+[Panel005Element002]
+Type=Switch
+Switch=010
+PositionX=15
+PositionY=118
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Bourdon-16-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Bourdon-16-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel005Element003]
+Type=Switch
+Switch=011
+PositionX=15
+PositionY=179
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Principal-8-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Principal-8-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel005Element004]
+Type=Switch
+Switch=012
+PositionX=15
+PositionY=240
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Bass-Flute-8-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Bass-Flute-8-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel005Element005]
+Type=Switch
+Switch=013
+PositionX=15
+PositionY=301
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Flute-4-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Flute-4-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel005Element006]
+Type=Switch
+Switch=014
+PositionX=15
+PositionY=362
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Fifteenth-4-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Fifteenth-4-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel005Element007]
+Type=Switch
+Switch=015
+PositionX=15
+PositionY=423
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Twenty-Second-2-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Twenty-Second-2-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel005Element008]
+Type=Switch
+Switch=016
+PositionX=15
+PositionY=484
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Ophicleide-16-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Ophicleide-16-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel005Element009]
+Type=Switch
+Switch=017
+PositionX=576
+PositionY=57
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Double-Open-Diapason-16-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Double-Open-Diapason-16-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel005Element010]
+Type=Switch
+Switch=018
+PositionX=576
+PositionY=118
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Open-Diapason-8-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Open-Diapason-8-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel005Element011]
+Type=Switch
+Switch=019
+PositionX=576
+PositionY=179
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Small-Open-Diapason-8-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Small-Open-Diapason-8-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel005Element012]
+Type=Switch
+Switch=020
+PositionX=576
+PositionY=240
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Claribel-Flute-8-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Claribel-Flute-8-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel005Element013]
+Type=Switch
+Switch=021
+PositionX=576
+PositionY=301
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Stopped-Diapason-8-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Stopped-Diapason-8-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel005Element014]
+Type=Switch
+Switch=022
+PositionX=576
+PositionY=362
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Flute-Harmonique-4-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Flute-Harmonique-4-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel005Element015]
+Type=Switch
+Switch=023
+PositionX=576
+PositionY=423
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Principal-4-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Principal-4-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel005Element016]
+Type=Switch
+Switch=024
+PositionX=576
+PositionY=484
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Twelfth-3-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Twelfth-3-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel005Element017]
+Type=Switch
+Switch=025
+PositionX=576
+PositionY=545
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Fifteenth-2-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Fifteenth-2-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel005Element018]
+Type=Switch
+Switch=026
+PositionX=576
+PositionY=606
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Sesquialtera-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Sesquialtera-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel005Element019]
+Type=Switch
+Switch=027
+PositionX=576
+PositionY=667
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Posaune-8-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Posaune-8-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel005Element020]
+Type=Switch
+Switch=028
+PositionX=576
+PositionY=728
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Clarion-4-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Clarion-4-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel005Element021]
+Type=Switch
+Switch=041
+PositionX=295
+PositionY=57
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Gamba-8-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Gamba-8-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel005Element022]
+Type=Switch
+Switch=042
+PositionX=295
+PositionY=118
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Dulciana-8-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Dulciana-8-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel005Element023]
+Type=Switch
+Switch=043
+PositionX=295
+PositionY=179
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Claribel-Flute-8-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Claribel-Flute-8-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel005Element024]
+Type=Switch
+Switch=044
+PositionX=295
+PositionY=240
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Lieblich-Gedact-8-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Lieblich-Gedact-8-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel005Element025]
+Type=Switch
+Switch=045
+PositionX=295
+PositionY=301
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Concert-Flute-4-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Concert-Flute-4-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel005Element026]
+Type=Switch
+Switch=046
+PositionX=295
+PositionY=362
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Piccolo-2-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Piccolo-2-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel005Element027]
+Type=Switch
+Switch=047
+PositionX=295
+PositionY=423
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Bassetto-8-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Bassetto-8-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+
+[Panel006]
+Name=Traditional Jamb - Left
+HasPedals=N
+NumberOfImages=0
+NumberOfGUIElements=21
+DispScreenSizeHoriz=275
+DispScreenSizeVert=945
+DispDrawstopBackgroundImageNum=5
+DispConsoleBackgroundImageNum=5
+DispKeyHorizBackgroundImageNum=5
+DispKeyVertBackgroundImageNum=5
+DispDrawstopInsetBackgroundImageNum=5
+DispControlLabelFont=Arial
+DispShortcutKeyLabelFont=Arial
+DispShortcutKeyLabelColour=BLACK
+DispGroupLabelFont=Arial
+DispDrawstopCols=2
+DispDrawstopRows=1
+DispDrawstopColsOffset=N
+DispPairDrawstopCols=N
+DispExtraDrawstopRows=0
+DispExtraDrawstopCols=0
+DispButtonCols=1
+DispExtraButtonRows=0
+DispExtraPedalButtonRow=N
+DispButtonsAboveManuals=N
+DispTrimAboveManuals=N
+DispTrimBelowManuals=N
+DispTrimAboveExtraRows=N
+DispExtraDrawstopRowsAboveExtraButtonRows=N
+
+[Panel006Element001]
+Type=Switch
+Switch=001
+PositionX=190
+PositionY=615
+DispLabelFontSize=LARGE
+TextBreakWidth=55
+
+[Panel006Element002]
+Type=Switch
+Switch=002
+PositionX=190
+PositionY=700
+DispLabelFontSize=LARGE
+TextBreakWidth=55
+
+[Panel006Element003]
+Type=Switch
+Switch=003
+PositionX=190
+PositionY=785
+DispLabelFontSize=LARGE
+TextBreakWidth=55
+
+[Panel006Element004]
+Type=Switch
+Switch=004
+PositionX=190
+PositionY=190
+DispLabelFontSize=LARGE
+DispLabelText=+8va Swell to Great
+TextBreakWidth=55
+
+[Panel006Element005]
+Type=Switch
+Switch=005
+PositionX=190
+PositionY=275
+DispLabelFontSize=LARGE
+DispLabelText=-8ve Swell to Great
+TextBreakWidth=55
+
+[Panel006Element006]
+Type=Switch
+Switch=006
+PositionX=190
+PositionY=360
+DispLabelFontSize=LARGE
+DispLabelText=Swell to Great
+TextBreakWidth=55
+
+[Panel006Element007]
+Type=Switch
+Switch=008
+PositionX=190
+PositionY=445
+DispLabelFontSize=LARGE
+TextBreakWidth=55
+
+[Panel006Element008]
+Type=Switch
+Switch=007
+PositionX=190
+PositionY=530
+DispLabelFontSize=LARGE
+TextBreakWidth=55
+
+[Panel006Element009]
+Type=Switch
+Switch=029
+PositionX=105
+PositionY=732
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=8' Open Diapason
+TextRectTop=0
+TextRectHeight=64
+
+[Panel006Element010]
+Type=Switch
+Switch=030
+PositionX=20
+PositionY=700
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=8' Lieblich Gedact
+TextRectTop=0
+TextRectHeight=64
+
+[Panel006Element011]
+Type=Switch
+Switch=031
+PositionX=105
+PositionY=647
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=8' Salcional
+TextRectTop=0
+TextRectHeight=64
+
+[Panel006Element012]
+Type=Switch
+Switch=032
+PositionX=20
+PositionY=615
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=8' Vox Angelica
+TextRectTop=0
+TextRectHeight=64
+
+[Panel006Element013]
+Type=Switch
+Switch=033
+PositionX=105
+PositionY=562
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=4' Gemshorn
+TextRectTop=0
+TextRectHeight=64
+TextBreakWidth=45
+
+[Panel006Element014]
+Type=Switch
+Switch=034
+PositionX=20
+PositionY=530
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=2' Flagolet
+TextRectTop=0
+TextRectHeight=64
+TextBreakWidth=45
+
+[Panel006Element015]
+Type=Switch
+Switch=035
+PositionX=105
+PositionY=477
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=Mixture 19.22.26
+TextRectTop=0
+TextRectHeight=63
+TextBreakWidth=55
+
+[Panel006Element016]
+Type=Switch
+Switch=036
+PositionX=20
+PositionY=445
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=16' Contra Pousaune
+TextRectTop=0
+TextRectHeight=64
+TextBreakWidth=60
+
+[Panel006Element017]
+Type=Switch
+Switch=037
+PositionX=105
+PositionY=392
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=8' Vox Humana
+TextRectTop=0
+TextRectHeight=64
+TextBreakWidth=55
+
+[Panel006Element018]
+Type=Switch
+Switch=038
+PositionX=20
+PositionY=360
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=8' Oboe
+TextRectTop=0
+TextRectHeight=64
+TextBreakWidth=40
+
+[Panel006Element019]
+Type=Switch
+Switch=039
+PositionX=105
+PositionY=307
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=8' Trumpet
+TextRectTop=0
+TextRectHeight=64
+TextBreakWidth=55
+
+[Panel006Element020]
+Type=Switch
+Switch=040
+PositionX=20
+PositionY=275
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=4' Clarion
+TextRectTop=0
+TextRectHeight=64
+TextBreakWidth=45
+
+[Panel006Element021]
+Type=Switch
+Switch=048
+PositionX=105
+PositionY=222
+DispLabelFontSize=LARGE
+DispLabelText=Tremulant
+TextBreakWidth=55
+
+
+[Panel007]
+Name=Traditional Jamb - Right
+HasPedals=N
+NumberOfImages=0
+NumberOfGUIElements=27
+DispScreenSizeHoriz=275
+DispScreenSizeVert=980
+DispDrawstopBackgroundImageNum=5
+DispConsoleBackgroundImageNum=5
+DispKeyHorizBackgroundImageNum=5
+DispKeyVertBackgroundImageNum=5
+DispDrawstopInsetBackgroundImageNum=5
+DispControlLabelFont=Arial
+DispShortcutKeyLabelFont=Arial
+DispShortcutKeyLabelColour=BLACK
+DispGroupLabelFont=Arial
+DispDrawstopCols=2
+DispDrawstopRows=1
+DispDrawstopColsOffset=N
+DispPairDrawstopCols=N
+DispExtraDrawstopRows=0
+DispExtraDrawstopCols=0
+DispButtonCols=1
+DispExtraButtonRows=0
+DispExtraPedalButtonRow=N
+DispButtonsAboveManuals=N
+DispTrimAboveManuals=N
+DispTrimBelowManuals=N
+DispTrimAboveExtraRows=N
+DispExtraDrawstopRowsAboveExtraButtonRows=N
+
+[Panel007Element001]
+Type=Switch
+Switch=009
+PositionX=105
+PositionY=817
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=16' Open Diapason Pedale
+
+[Panel007Element002]
+Type=Switch
+Switch=010
+PositionX=190
+PositionY=785
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=16' Bourdon Pedale
+
+[Panel007Element003]
+Type=Switch
+Switch=011
+PositionX=105
+PositionY=732
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=8' Principal Pedale
+
+[Panel007Element004]
+Type=Switch
+Switch=012
+PositionX=190
+PositionY=700
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=8' Bass Flute
+
+[Panel007Element005]
+Type=Switch
+Switch=013
+PositionX=105
+PositionY=647
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=4' Flute Pedale
+
+[Panel007Element006]
+Type=Switch
+Switch=014
+PositionX=190
+PositionY=615
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=Fifteenth Pedale
+
+[Panel007Element007]
+Type=Switch
+Switch=015
+PositionX=105
+PositionY=562
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=Twenty Second Pedale
+
+[Panel007Element008]
+Type=Switch
+Switch=016
+PositionX=190
+PositionY=530
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=16' Ophicliede Pedale
+
+[Panel007Element009]
+Type=Switch
+Switch=017
+PositionX=105
+PositionY=477
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=16' Double Open Diapason
+
+[Panel007Element010]
+Type=Switch
+Switch=018
+PositionX=190
+PositionY=445
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=8' Open Diapason
+
+[Panel007Element011]
+Type=Switch
+Switch=019
+PositionX=105
+PositionY=392
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=8' Small Open Diapason
+
+[Panel007Element012]
+Type=Switch
+Switch=020
+PositionX=190
+PositionY=360
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=8' Claribel Flute
+
+[Panel007Element013]
+Type=Switch
+Switch=021
+PositionX=105
+PositionY=307
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=8' Stopped Diapason
+
+[Panel007Element014]
+Type=Switch
+Switch=022
+PositionX=190
+PositionY=275
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=4' Fl�te Harmonique
+
+[Panel007Element015]
+Type=Switch
+Switch=023
+PositionX=105
+PositionY=222
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=4' Principal
+
+[Panel007Element016]
+Type=Switch
+Switch=024
+PositionX=190
+PositionY=190
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=3' Twelfth
+
+[Panel007Element017]
+Type=Switch
+Switch=025
+PositionX=105
+PositionY=137
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=2' Fifteenth
+
+[Panel007Element018]
+Type=Switch
+Switch=026
+PositionX=190
+PositionY=105
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=Sesquialtera
+
+[Panel007Element019]
+Type=Switch
+Switch=027
+PositionX=105
+PositionY=52
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=8' Pousane
+
+[Panel007Element020]
+Type=Switch
+Switch=028
+PositionX=190
+PositionY=20
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=4' Clarion
+
+[Panel007Element021]
+Type=Switch
+Switch=041
+PositionX=20
+PositionY=785
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=8' Gamba Choir
+
+[Panel007Element022]
+Type=Switch
+Switch=042
+PositionX=20
+PositionY=700
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=8' Dulciana Choir
+
+[Panel007Element023]
+Type=Switch
+Switch=043
+PositionX=20
+PositionY=615
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=8' Claribel Flute Choir
+
+[Panel007Element024]
+Type=Switch
+Switch=044
+PositionX=20
+PositionY=530
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=8' Lieblich Gedact Choir
+
+[Panel007Element025]
+Type=Switch
+Switch=045
+PositionX=20
+PositionY=445
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=4' Concert Flute Choir
+
+[Panel007Element026]
+Type=Switch
+Switch=046
+PositionX=20
+PositionY=360
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=2' Piccolo Choir
+
+[Panel007Element027]
+Type=Switch
+Switch=047
+PositionX=20
+PositionY=275
+DispLabelColour=BLACK
+DispLabelFontSize=LARGE
+DispLabelText=8' Corno Di Bassetto Choir
 
 
