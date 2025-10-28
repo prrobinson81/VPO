@@ -3,7 +3,6 @@
 // Original keyboard matrix code from:
 // https://www.baldengineer.com/arduino-keyboard-matrix-tutorial.html
 //
-// TODO - migrate to Teensy MIDI to send note on/off values from the switches, and receive note on/off values to control the LEDs.
 
 #include <Adafruit_NeoPixel.h>
 
@@ -15,6 +14,12 @@
 // How many NeoPixels are attached to the Arduino?
 #define JAMB1_LED_COUNT 30
 #define JAMB2_LED_COUNT 30
+
+// the MIDI channel number to send messages
+const int MIDI_CHAN = 1;
+
+// output MIDI note values, not CC values
+const int MIDI_MODE_NOTES = 0;
 
 // Declare our NeoPixel strip object:
 Adafruit_NeoPixel jamb1_strip(JAMB1_LED_COUNT, JAMB1_LED_PIN, NEO_RGB + NEO_KHZ800);
@@ -51,6 +56,11 @@ void setup() {
   jamb1_strip.setBrightness(250); // Set BRIGHTNESS to about 1/5 (max = 255)
   jamb2_strip.setBrightness(250); // Set BRIGHTNESS to about 1/5 (max = 255)
 
+  // Serial.print("Columns: ");
+  // Serial.print(colCount);
+  // Serial.print(", Rows: ");
+  // Serial.println(rowCount);
+
   // initiate cached states to 1/off
   // Note:
   // - we're using INPUT_PULLUP so a closed/on switch completes the circuit, earthing the value to low/0.
@@ -63,17 +73,25 @@ void setup() {
 
   // Write out to serial the rows which have been set to INPUT, and then set the pinMode accordingly.
   for(int x = 0; x < rowCount; x++) {
-    Serial.print(rowPins[x]);
-    Serial.println(" as input");
+    // Serial.print(rowPins[x]);
+    // Serial.println(" as input");
     pinMode(rowPins[x], INPUT);
   }
 
   // Write out to serial the columns which have been set to INPUT_PULLUP, and then set the pinMode accordingly.
   for (int x = 0; x < colCount; x++) {
-    Serial.print(colPins[x]);
-    Serial.println(" as input-pullup");
+    // Serial.print(colPins[x]);
+    // Serial.println(" as input-pullup");
     pinMode(colPins[x], INPUT_PULLUP);
   }
+
+  // Serial.print("Beginning Waterfall effect...");
+  waterfall();
+  // Serial.println("done.");
+
+  // Set the MIDI note on and off handlers
+  usbMIDI.setHandleNoteOn(myNoteOn);
+  usbMIDI.setHandleNoteOff(myNoteOff);
 }
 
 // Read the state of the key matrix at this specific instance in time.
@@ -97,27 +115,40 @@ void readMatrix() {
       keys[colIndex][rowIndex] = digitalRead(rowPin);
       pinMode(rowPin, INPUT);
 
+      // if (keys[colIndex][rowIndex] == 0) {
+      //   Serial.print("Switch pressed at ");
+      //   Serial.print(colIndex);
+      //   Serial.print(",");
+      //   Serial.println(rowIndex);
+      // }
+
       // if the read value does NOT match the cached value...
       if (keys[colIndex][rowIndex] != keycache[colIndex][rowIndex]) {
         // define the final pin index based on the column and row position
         byte midiNote = (colIndex * 10) + rowIndex;
 
         // write out the index and status
-        Serial.print(midiNote);
-        Serial.print(F(": "));
+        // Serial.print(midiNote);
+        // Serial.print(F(": "));
 
         if (keys[colIndex][rowIndex] == 1) {
-          Serial.print("off");
+          // Serial.print("off");
+          usbMIDI.sendNoteOff(midiNote, 0, MIDI_CHAN);  // LOWEST_NOTE + i = MIDI note value
 
           if (midiNote < 30) {
-            jamb1_strip.setPixelColor(midiNote, jamb1_strip.Color(0, 0, 0));
-            jamb1_strip.show();
+            if (jamb1_strip.getPixelColor(midiNote) == jamb1_strip.Color(0, 0, 255)) {
+              jamb1_strip.setPixelColor(midiNote, jamb1_strip.Color(0, 0, 0));
+              jamb1_strip.show();
+            }
           } else {
-            jamb2_strip.setPixelColor(midiNote - 30, jamb2_strip.Color(0, 0, 0));
-            jamb2_strip.show();
+            if (jamb2_strip.getPixelColor(midiNote - 30) == jamb2_strip.Color(0, 0, 255)) {
+              jamb2_strip.setPixelColor(midiNote - 30, jamb2_strip.Color(0, 0, 0));
+              jamb2_strip.show();
+            }
           }
         } else {
-          Serial.print("on");
+          // Serial.print("on");
+          usbMIDI.sendNoteOn(midiNote, 99, MIDI_CHAN);
 
           if (midiNote < 30) {
             jamb1_strip.setPixelColor(midiNote, jamb1_strip.Color(0, 0, 255));
@@ -128,7 +159,7 @@ void readMatrix() {
           }
         }
 
-        Serial.println("");
+        // Serial.println("");
 
         // update the cached value
         keycache[colIndex][rowIndex] = keys[colIndex][rowIndex];
@@ -144,4 +175,76 @@ void readMatrix() {
 void loop() {
   // constantly read the key matrix.
   readMatrix();
+
+  // Second section clears incoming MIDI signals - note that MIDI Controllers should discard incoming MIDI messages.
+  while (usbMIDI.read()) {
+    // read & ignore incoming messages
+  }
+}
+
+void myNoteOn(byte channel, byte note, byte velocity) {
+  // When using MIDIx4 or MIDIx16, usbMIDI.getCable() can be used
+  // to read which of the virtual MIDI cables received this message.
+  // Serial.print("Note On, ch=");
+  // Serial.print(channel, DEC);
+  // Serial.print(", note=");
+  // Serial.print(note, DEC);
+  // Serial.print(", velocity=");
+  // Serial.println(velocity, DEC);
+
+  if (note < 30) {
+    jamb1_strip.setPixelColor(note, jamb1_strip.Color(255, 255, 255));
+    jamb1_strip.show();
+  } else {
+    jamb2_strip.setPixelColor(note - 30, jamb2_strip.Color(255, 255, 255));
+    jamb2_strip.show();
+  }
+}
+
+void myNoteOff(byte channel, byte note, byte velocity) {
+  // Serial.print("Note Off, ch=");
+  // Serial.print(channel, DEC);
+  // Serial.print(", note=");
+  // Serial.print(note, DEC);
+  // Serial.print(", velocity=");
+  // Serial.println(velocity, DEC);
+
+  if (note < 30) {
+    jamb1_strip.setPixelColor(note, jamb1_strip.Color(0, 0, 0));
+    jamb1_strip.show();
+  } else {
+    jamb2_strip.setPixelColor(note - 30, jamb2_strip.Color(0, 0, 0));
+    jamb2_strip.show();
+  }
+}
+
+void waterfall() {
+  uint32_t colors[] = {jamb2_strip.Color(255, 0, 0), jamb2_strip.Color(0, 255, 0), jamb2_strip.Color(0, 0, 255), jamb2_strip.Color(255, 255, 255)};
+  int colorCount = sizeof(colors) / sizeof(colors[0]);
+
+  for (int colorIndex = 0; colorIndex < colorCount; colorIndex++) {
+    for (int rowIndex = 0; rowIndex < rowCount; rowIndex++) {
+      for (int colIndex = 0; colIndex < colCount; colIndex++) {
+        int ledIndex = (colIndex * 10) + rowIndex;
+        if (ledIndex < 30) {
+          jamb1_strip.setPixelColor(ledIndex, colors[colorIndex]);
+        }
+
+        if (ledIndex >= 30 && ledIndex < 60) {
+          jamb2_strip.setPixelColor(ledIndex - 30, colors[colorIndex]);
+        }
+      }
+
+      jamb1_strip.show();
+      jamb2_strip.show();
+
+      delay(100);
+    }
+  }
+
+  jamb1_strip.clear();
+  jamb2_strip.clear();
+
+  jamb1_strip.show();
+  jamb2_strip.show();
 }
