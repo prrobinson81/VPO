@@ -7,7 +7,8 @@
 ;1.3 Corrected Sesquialter Harmonic Number; softened tremulant
 ;1.4 Further pitch corrections
 ;1.4.1 Extend keyboard compass to 61 notes
-;1.4.2 Split Simple Jamb into Simple-Left and Simple-Right for use on portrait touchscreens.
+;1.4.2 Split Simple Jamb into Simple-Left and Simple-Right for use on portrait touchscreens
+;1.4.3 Added Choir to Swell coupler with stops on Simple and Simple-Left jambs
 ;
 ;This GrandOrgue Organ Definition File (ODF) is provided under the Creative Commons Non-Commercial
 ;Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
@@ -34,8 +35,8 @@ NumberOfWindchestGroups=5
 NumberOfReversiblePistons=3
 NumberOfGenerals=0
 NumberOfDivisionalCouplers=0
-NumberOfPanels=7
-NumberOfSwitches=57
+NumberOfPanels=5
+NumberOfSwitches=58
 NumberOfRanks=43
 DivisionalsStoreIntermanualCouplers=N
 DivisionalsStoreIntramanualCouplers=N
@@ -190,6 +191,21 @@ CoupleToSubsequentDownwardIntramanualCouplers=N
 NumberOfKeys=56
 
 [Coupler008]
+Name=Choir to Swell
+Function=And
+SwitchCount=1
+Switch001=058
+UnisonOff=N
+DestinationManual=001
+DestinationKeyshift=0
+CoupleToSubsequentUnisonIntermanualCouplers=N
+CoupleToSubsequentUpwardIntermanualCouplers=N
+CoupleToSubsequentDownwardIntermanualCouplers=N
+CoupleToSubsequentUpwardIntramanualCouplers=N
+CoupleToSubsequentDownwardIntramanualCouplers=N
+NumberOfKeys=61
+
+[Coupler009]
 Name=VK 1 -> 1
 Function=And
 SwitchCount=1
@@ -203,7 +219,7 @@ CoupleToSubsequentDownwardIntermanualCouplers=Y
 CoupleToSubsequentUpwardIntramanualCouplers=Y
 CoupleToSubsequentDownwardIntramanualCouplers=Y
 
-[Coupler009]
+[Coupler010]
 Name=VK 1 -> 2
 Function=And
 SwitchCount=1
@@ -217,7 +233,7 @@ CoupleToSubsequentDownwardIntermanualCouplers=Y
 CoupleToSubsequentUpwardIntramanualCouplers=Y
 CoupleToSubsequentDownwardIntramanualCouplers=Y
 
-[Coupler010]
+[Coupler011]
 Name=VK 1 -> 3
 Function=And
 SwitchCount=1
@@ -231,7 +247,7 @@ CoupleToSubsequentDownwardIntermanualCouplers=Y
 CoupleToSubsequentUpwardIntramanualCouplers=Y
 CoupleToSubsequentDownwardIntramanualCouplers=Y
 
-[Coupler011]
+[Coupler012]
 Name=VK 2 -> 1
 Function=And
 SwitchCount=1
@@ -245,7 +261,7 @@ CoupleToSubsequentDownwardIntermanualCouplers=Y
 CoupleToSubsequentUpwardIntramanualCouplers=Y
 CoupleToSubsequentDownwardIntramanualCouplers=Y
 
-[Coupler012]
+[Coupler013]
 Name=VK 2 -> 2
 Function=And
 SwitchCount=1
@@ -259,7 +275,7 @@ CoupleToSubsequentDownwardIntermanualCouplers=Y
 CoupleToSubsequentUpwardIntramanualCouplers=Y
 CoupleToSubsequentDownwardIntramanualCouplers=Y
 
-[Coupler013]
+[Coupler014]
 Name=VK 2 -> 3
 Function=And
 SwitchCount=1
@@ -273,7 +289,7 @@ CoupleToSubsequentDownwardIntermanualCouplers=Y
 CoupleToSubsequentUpwardIntramanualCouplers=Y
 CoupleToSubsequentDownwardIntramanualCouplers=Y
 
-[Coupler014]
+[Coupler015]
 Name=VK 3 -> 1
 Function=And
 SwitchCount=1
@@ -287,7 +303,7 @@ CoupleToSubsequentDownwardIntermanualCouplers=Y
 CoupleToSubsequentUpwardIntramanualCouplers=Y
 CoupleToSubsequentDownwardIntramanualCouplers=Y
 
-[Coupler015]
+[Coupler016]
 Name=VK 3 -> 2
 Function=And
 SwitchCount=1
@@ -301,7 +317,7 @@ CoupleToSubsequentDownwardIntermanualCouplers=Y
 CoupleToSubsequentUpwardIntramanualCouplers=Y
 CoupleToSubsequentDownwardIntramanualCouplers=Y
 
-[Coupler016]
+[Coupler017]
 Name=VK 3 -> 3
 Function=And
 SwitchCount=1
@@ -318,17 +334,17 @@ CoupleToSubsequentDownwardIntramanualCouplers=Y
 [ReversiblePiston001]
 Name=Sw to Gt
 ObjectType=SWITCH
-ObjectNumber=011
+ObjectNumber=012
 
 [ReversiblePiston002]
 Name=Ped Reed 16
 ObjectType=SWITCH
-ObjectNumber=023
+ObjectNumber=024
 
 [ReversiblePiston003]
 Name=Gt to Ped
 ObjectType=SWITCH
-ObjectNumber=014
+ObjectNumber=015
 
 [Manual000]
 Name=Pedale
@@ -556,7 +572,9 @@ Stop035=141
 Stop036=142
 Stop037=143
 Stop038=144
-NumberOfSwitches=12
+NumberOfCouplers=1
+Coupler001=008
+NumberOfSwitches=13
 Switch001=029
 Switch002=030
 Switch003=031
@@ -569,6 +587,7 @@ Switch009=037
 Switch010=038
 Switch011=039
 Switch012=040
+Switch013=058
 
 [Manual004]
 Name=Virtual Keyboard 1
@@ -579,9 +598,9 @@ NumberOfAccessibleKeys=56
 MIDIInputNumber=5
 NumberOfStops=0
 NumberOfCouplers=3
-Coupler001=008
-Coupler002=009
-Coupler003=010
+Coupler001=009
+Coupler002=010
+Coupler003=011
 
 [Manual005]
 Name=Virtual Keyboard 2
@@ -592,9 +611,9 @@ NumberOfAccessibleKeys=56
 MIDIInputNumber=6
 NumberOfStops=0
 NumberOfCouplers=3
-Coupler001=011
-Coupler002=012
-Coupler003=013
+Coupler001=012
+Coupler002=013
+Coupler003=014
 
 [Manual006]
 Name=Virtual Keyboard 3
@@ -605,9 +624,9 @@ NumberOfAccessibleKeys=56
 MIDIInputNumber=7
 NumberOfStops=0
 NumberOfCouplers=3
-Coupler001=014
-Coupler002=015
-Coupler003=016
+Coupler001=015
+Coupler002=016
+Coupler003=017
 
 [Switch001]
 Name=Tremulant Tremulant Swell
@@ -858,6 +877,11 @@ DefaultToEngaged=Y
 GCState=1
 StoreInDivisional=N
 StoreInGeneral=N
+
+[Switch058]
+Name=Coupler Choir to Swell
+DefaultToEngaged=N
+StoreInDivisional=N
 
 [Rank001]
 Name=Ped. Open Diapason 16
@@ -28463,7 +28487,7 @@ TextBreakWidth=0
 Name=Simple Jamb
 HasPedals=Y
 NumberOfImages=1
-NumberOfGUIElements=58
+NumberOfGUIElements=59
 DispScreenSizeHoriz=1611
 DispScreenSizeVert=980
 DispDrawstopBackgroundImageNum=17
@@ -28565,7 +28589,7 @@ TextBreakWidth=0
 Type=Switch
 Switch=005
 PositionX=1136
-PositionY=240
+PositionY=301
 DispLabelFontSize=12
 ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Choir-to-Great-On.png
 ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Choir-to-Great-Off.png
@@ -28576,7 +28600,7 @@ TextBreakWidth=0
 Type=Switch
 Switch=006
 PositionX=1136
-PositionY=301
+PositionY=362
 DispLabelFontSize=12
 ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Swell-to-Pedal-On.png
 ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Swell-to-Pedal-Off.png
@@ -28587,7 +28611,7 @@ TextBreakWidth=0
 Type=Switch
 Switch=007
 PositionX=1136
-PositionY=362
+PositionY=423
 DispLabelFontSize=12
 ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Great-to-Pedal-On.png
 ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Great-to-Pedal-Off.png
@@ -28598,7 +28622,7 @@ TextBreakWidth=0
 Type=Switch
 Switch=008
 PositionX=1136
-PositionY=423
+PositionY=484
 DispLabelFontSize=12
 ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Choir-to-Pedal-On.png
 ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Choir-to-Pedal-Off.png
@@ -29127,6 +29151,17 @@ ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Piston\1.png
 MouseRadius=0
 TextBreakWidth=0
 
+[Panel001Element059]
+Type=Switch
+Switch=058
+PositionX=1136
+PositionY=240
+DispLabelFontSize=12
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Choir-to-Swell-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Choir-to-Swell-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
 
 [Panel002]
 Name=Info
@@ -29264,7 +29299,7 @@ DispDrawstopCol=3
 Name=Simple Jamb - Left
 HasPedals=Y
 NumberOfImages=1
-NumberOfGUIElements=21
+NumberOfGUIElements=22
 DispScreenSizeHoriz=770
 DispScreenSizeVert=980
 DispDrawstopBackgroundImageNum=17
@@ -29360,31 +29395,31 @@ TextBreakWidth=0
 
 [Panel004Element006]
 Type=Switch
-Switch=005
-PositionX=295
-PositionY=240
-ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Choir-to-Great-On.png
-ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Choir-to-Great-Off.png
-MouseRadius=0
-TextBreakWidth=0
-
-[Panel004Element007]
-Type=Switch
 Switch=006
 PositionX=295
-PositionY=301
+PositionY=240
 ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Swell-to-Pedal-On.png
 ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Swell-to-Pedal-Off.png
 MouseRadius=0
 TextBreakWidth=0
 
+[Panel004Element007]
+Type=Switch
+Switch=058
+PositionX=295
+PositionY=301
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Choir-to-Swell-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Choir-to-Swell-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
 [Panel004Element008]
 Type=Switch
-Switch=007
+Switch=005
 PositionX=295
 PositionY=362
-ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Great-to-Pedal-On.png
-ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Great-to-Pedal-Off.png
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Choir-to-Great-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Choir-to-Great-Off.png
 MouseRadius=0
 TextBreakWidth=0
 
@@ -29400,6 +29435,16 @@ TextBreakWidth=0
 
 [Panel004Element010]
 Type=Switch
+Switch=007
+PositionX=295
+PositionY=484
+ImageOn=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Great-to-Pedal-On.png
+ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Great-to-Pedal-Off.png
+MouseRadius=0
+TextBreakWidth=0
+
+[Panel004Element011]
+Type=Switch
 Switch=029
 PositionX=15
 PositionY=57
@@ -29408,7 +29453,7 @@ ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Open-Diapason
 MouseRadius=0
 TextBreakWidth=0
 
-[Panel004Element011]
+[Panel004Element012]
 Type=Switch
 Switch=030
 PositionX=15
@@ -29418,7 +29463,7 @@ ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Lieblich-Geda
 MouseRadius=0
 TextBreakWidth=0
 
-[Panel004Element012]
+[Panel004Element013]
 Type=Switch
 Switch=031
 PositionX=15
@@ -29428,7 +29473,7 @@ ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Salcional-8-O
 MouseRadius=0
 TextBreakWidth=0
 
-[Panel004Element013]
+[Panel004Element014]
 Type=Switch
 Switch=032
 PositionX=15
@@ -29438,7 +29483,7 @@ ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Vox-Angelica-
 MouseRadius=0
 TextBreakWidth=0
 
-[Panel004Element014]
+[Panel004Element015]
 Type=Switch
 Switch=033
 PositionX=15
@@ -29448,7 +29493,7 @@ ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Gemshorn-4-Of
 MouseRadius=0
 TextBreakWidth=0
 
-[Panel004Element015]
+[Panel004Element016]
 Type=Switch
 Switch=034
 PositionX=15
@@ -29458,7 +29503,7 @@ ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Flagoelet-2-O
 MouseRadius=0
 TextBreakWidth=0
 
-[Panel004Element016]
+[Panel004Element017]
 Type=Switch
 Switch=035
 PositionX=15
@@ -29468,7 +29513,7 @@ ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Mixture-Off.p
 MouseRadius=0
 TextBreakWidth=0
 
-[Panel004Element017]
+[Panel004Element018]
 Type=Switch
 Switch=036
 PositionX=15
@@ -29478,7 +29523,7 @@ ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Posaune-16-Of
 MouseRadius=0
 TextBreakWidth=0
 
-[Panel004Element018]
+[Panel004Element019]
 Type=Switch
 Switch=037
 PositionX=15
@@ -29488,7 +29533,7 @@ ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Vox-Humana-8-
 MouseRadius=0
 TextBreakWidth=0
 
-[Panel004Element019]
+[Panel004Element020]
 Type=Switch
 Switch=038
 PositionX=15
@@ -29498,7 +29543,7 @@ ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Oboe-8-Off.pn
 MouseRadius=0
 TextBreakWidth=0
 
-[Panel004Element020]
+[Panel004Element021]
 Type=Switch
 Switch=039
 PositionX=15
@@ -29508,7 +29553,7 @@ ImageOff=OrganInstallationPackages\002931\Images\Simple Jamb\Stops\Trumpet-8-Off
 MouseRadius=0
 TextBreakWidth=0
 
-[Panel004Element021]
+[Panel004Element022]
 Type=Switch
 Switch=040
 PositionX=15
