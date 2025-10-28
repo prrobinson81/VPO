@@ -11,6 +11,7 @@
 ;1.4.3 Added Choir to Swell coupler with stops on Simple and Simple-Left jambs
 ;      Removed Traditional Left and Right jambs
 ;      Fixed compass of existing couplers
+;      Stop Couplers being stored in Divisionals
 ;
 ;This GrandOrgue Organ Definition File (ODF) is provided under the Creative Commons Non-Commercial
 ;Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
@@ -637,30 +638,37 @@ DefaultToEngaged=N
 [Switch002]
 Name=Coupler Swell Super Octave to Great
 DefaultToEngaged=N
+StoreInDivisional=N
 
 [Switch003]
 Name=Coupler Swell Sub Octave to Great
 DefaultToEngaged=N
+StoreInDivisional=N
 
 [Switch004]
 Name=Coupler Swell to Great Unison
 DefaultToEngaged=N
+StoreInDivisional=N
 
 [Switch005]
 Name=Coupler Choir to Great
 DefaultToEngaged=N
+StoreInDivisional=N
 
 [Switch006]
 Name=Coupler Swell to Pedals
 DefaultToEngaged=N
+StoreInDivisional=N
 
 [Switch007]
 Name=Coupler Great to Pedals
 DefaultToEngaged=N
+StoreInDivisional=N
 
 [Switch008]
 Name=Coupler Choir to Pedals
 DefaultToEngaged=N
+StoreInDivisional=N
 
 [Switch009]
 Name=Stop Ped. Open Diapason 16
